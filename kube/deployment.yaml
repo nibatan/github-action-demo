@@ -15,7 +15,7 @@ spec:
         app: demo-action
     spec:
       containers:
-      - image: 202058804932.dkr.ecr.us-east-1.amazonaws.com/test:IMAGE_LABEL
+      - image: 885300287765.dkr.ecr.us-east-1.amazonaws.com/ecr-repo:IMAGE_LABEL
         name: demo-action
         imagePullPolicy: Always
         args: ["npm", "start"]
