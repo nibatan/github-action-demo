@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: demo-action
+  labels:
+    app: demo-action
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: demo-action
+  template:
+    metadata:
+      labels:
+        app: demo-action
+    spec:
+      containers:
+      - image: 202058804932.dkr.ecr.us-east-1.amazonaws.com/test:IMAGE_LABEL
+        name: demo-action
+        imagePullPolicy: Always
+        args: ["npm", "start"]
+        ports:
+        - containerPort: 8080
+        resources:
+          requests:
+            memory: "250Mi"
+            cpu: "250m"
+          limits:
+              memory: "500Mi"
+              cpu: "500m"
+
