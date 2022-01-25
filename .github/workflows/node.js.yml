@@ -1,5 +1,4 @@
-name: Node Application
-
+name: Node Applications
 ##on: [push]
 
 on: [push, pull_request, issues]
